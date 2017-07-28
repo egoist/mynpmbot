@@ -1,0 +1,31 @@
+{
+  "name": "mynpmbot",
+  "version": "0.0.0",
+  "description": "npm bot for telegram",
+  "repository": {
+    "url": "egoist/mynpmbot",
+    "type": "git"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "npm run lint && echo 'no tests!'",
+    "lint": "xo",
+    "start": "node index.js"
+  },
+  "author": "egoist <0x142857@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "is-taken": "^1.0.1",
+    "node-telegram-bot-api": "^0.27.1"
+  },
+  "devDependencies": {
+    "eslint-config-rem": "^3.0.0",
+    "xo": "^0.18.0"
+  },
+  "xo": {
+    "extends": "rem"
+  }
+}
