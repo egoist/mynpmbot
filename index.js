@@ -7,6 +7,11 @@ const token = process.env.BOT_TOKEN
 // Create a bot that uses 'polling' to fetch new updates
 const bot = new TelegramBot(token, { polling: true })
 
+bot.onText(/\/check$/, msg => {
+  const chatId = msg.chat.id
+  bot.sendMessage(chatId, `please provide npm package name, like "/check react"`)
+})
+
 // Matches "/echo [whatever]"
 bot.onText(/\/check (.+)/, async (msg, match) => {
   // 'msg' is the received Message from Telegram
