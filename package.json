@@ -13,16 +13,19 @@
   "scripts": {
     "test": "npm run lint && echo 'no tests!'",
     "lint": "xo",
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "http_proxy=http://localhost:8787 NODE_ENV=development nodemon index.js"
   },
   "author": "egoist <0x142857@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^4.0.0",
     "is-taken": "^1.0.1",
     "node-telegram-bot-api": "^0.27.1"
   },
   "devDependencies": {
     "eslint-config-rem": "^3.0.0",
+    "nodemon": "^1.11.0",
     "xo": "^0.18.0"
   },
   "xo": {
